@@ -20,7 +20,7 @@ namespace GradeBook.GradeBooks
         public BaseGradeBook(string name, bool isweighted )
         {
             Name = name;
-            IsWeighted = isweighted
+            IsWeighted = isweighted;
             Students = new List<Student>();
         }
 
@@ -115,14 +115,19 @@ namespace GradeBook.GradeBooks
             {
                 case 'A':
                     gpa = 4;
+                    break;
                 case 'B':
                     gpa =  3;
+                    break;
                 case 'C':
                     gpa =  2;
+                    break;
                 case 'D':
                     gpa = 1;
+                    break;
                 case 'F':
                     gpa = 0;
+                    break;
             }
 
             if (IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
